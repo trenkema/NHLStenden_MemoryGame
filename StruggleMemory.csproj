@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <PublishSingleFile>true</PublishSingleFile>
+    <ApplicationIcon>AppIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Cards\BabyCards\1.png" />
+    <None Remove="Cards\BabyCards\2.png" />
+    <None Remove="Cards\BabyCards\3.png" />
+    <None Remove="Cards\BabyCards\4.png" />
+    <None Remove="Cards\BabyCards\5.png" />
+    <None Remove="Cards\BabyCards\6.png" />
+    <None Remove="Cards\BabyCards\7.png" />
+    <None Remove="Cards\BabyCards\8.png" />
+    <None Remove="Cards\BabyCards\9.png" />
+    <None Remove="Cards\BabyCards\BabyBack.png" />
+    <None Remove="Cards\BabyCards\BabyBack.psd" />
+    <None Remove="Cards\BeerCards\1.png" />
+    <None Remove="Cards\BeerCards\2.png" />
+    <None Remove="Cards\BeerCards\3.png" />
+    <None Remove="Cards\BeerCards\4.png" />
+    <None Remove="Cards\BeerCards\5.png" />
+    <None Remove="Cards\BeerCards\6.png" />
+    <None Remove="Cards\BeerCards\7.png" />
+    <None Remove="Cards\BeerCards\8.png" />
+    <None Remove="Cards\BeerCards\Background.jpg" />
+    <None Remove="Cards\BeerCards\BeerCard.psd" />
+    <None Remove="Cards\BeerCards\BierBack.png" />
+    <None Remove="Cards\BeerCards\BierBack.psd" />
+    <None Remove="Cards\DrinkCards\1.png" />
+    <None Remove="Cards\DrinkCards\2.png" />
+    <None Remove="Cards\DrinkCards\3.png" />
+    <None Remove="Cards\DrinkCards\4.png" />
+    <None Remove="Cards\DrinkCards\5.png" />
+    <None Remove="Cards\DrinkCards\6.png" />
+    <None Remove="Cards\DrinkCards\7.png" />
+    <None Remove="Cards\DrinkCards\8.png" />
+    <None Remove="Cards\DrinkCards\BierBack.psd" />
+    <None Remove="Cards\DrinkCards\DrankBack.png" />
+    <None Remove="Cards\DrinkCards\DrankBack.psd" />
+    <None Remove="Cards\DrinkCards\DrankBackground.jpg" />
+    <None Remove="Images\2bij1.png" />
+    <None Remove="Images\2bij2.png" />
+    <None Remove="Images\4bij4.png" />
+    <None Remove="Images\AppIcon.ico" />
+    <None Remove="Images\BabyBackground.png" />
+    <None Remove="Images\BabyButtonTrim.png" />
+    <None Remove="Images\CreatedBy.png" />
+    <None Remove="Images\deur-main.png" />
+    <None Remove="Images\ExitToMain-opt.png" />
+    <None Remove="Images\gamereset.png" />
+    <None Remove="Images\HomeButton.png" />
+    <None Remove="Images\homemenu.png" />
+    <None Remove="Images\Logo5.png" />
+    <None Remove="Images\MainMenuBackground.jpg" />
+    <None Remove="Images\MainMenuButton.png" />
+    <None Remove="Images\Play.png" />
+    <None Remove="Images\QuitButton.png" />
+    <None Remove="Images\ReplayBoxBaby.png" />
+    <None Remove="Images\ReplayButtonBaby.png" />
+    <None Remove="Images\ReplayButtonStudent.png" />
+    <None Remove="Images\SelectionButton.png" />
+    <None Remove="Images\Soon.png" />
+    <None Remove="Images\startstudent-rarr.png" />
+    <None Remove="Images\startstudent.png" />
+    <None Remove="Images\Stop.png" />
+    <None Remove="Images\StudentButton.png" />
+    <None Remove="Images\whitegamereset.png" />
+    <None Remove="Images\whitehomemenu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Cards\BabyCards\1.png" />
+    <Resource Include="Cards\BabyCards\2.png" />
+    <Resource Include="Cards\BabyCards\3.png" />
+    <Resource Include="Cards\BabyCards\4.png" />
+    <Resource Include="Cards\BabyCards\5.png" />
+    <Resource Include="Cards\BabyCards\6.png" />
+    <Resource Include="Cards\BabyCards\7.png" />
+    <Resource Include="Cards\BabyCards\8.png" />
+    <Resource Include="Cards\BabyCards\9.png" />
+    <Resource Include="Cards\BabyCards\BabyBack.png" />
+    <Resource Include="Cards\BabyCards\BabyBack.psd" />
+    <Resource Include="Cards\BeerCards\1.png" />
+    <Resource Include="Cards\BeerCards\2.png" />
+    <Resource Include="Cards\BeerCards\3.png" />
+    <Resource Include="Cards\BeerCards\4.png" />
+    <Resource Include="Cards\BeerCards\5.png" />
+    <Resource Include="Cards\BeerCards\6.png" />
+    <Resource Include="Cards\BeerCards\7.png" />
+    <Resource Include="Cards\BeerCards\8.png" />
+    <Resource Include="Cards\BeerCards\Background.jpg" />
+    <Resource Include="Cards\BeerCards\BeerCard.psd" />
+    <Resource Include="Cards\BeerCards\BierBack.png" />
+    <Resource Include="Cards\BeerCards\BierBack.psd" />
+    <Resource Include="Cards\DrinkCards\1.png" />
+    <Resource Include="Cards\DrinkCards\2.png" />
+    <Resource Include="Cards\DrinkCards\3.png" />
+    <Resource Include="Cards\DrinkCards\4.png" />
+    <Resource Include="Cards\DrinkCards\5.png" />
+    <Resource Include="Cards\DrinkCards\6.png" />
+    <Resource Include="Cards\DrinkCards\7.png" />
+    <Resource Include="Cards\DrinkCards\8.png" />
+    <Resource Include="Cards\DrinkCards\BierBack.psd" />
+    <Resource Include="Cards\DrinkCards\DrankBack.png" />
+    <Resource Include="Cards\DrinkCards\DrankBack.psd" />
+    <Resource Include="Cards\DrinkCards\DrankBackground.jpg" />
+    <Resource Include="Images\2bij1.png" />
+    <Resource Include="Images\2bij2.png" />
+    <Resource Include="Images\4bij4.png" />
+    <Resource Include="Images\AppIcon.ico" />
+    <Resource Include="Images\BabyBackground.png" />
+    <Resource Include="Images\BabyButtonTrim.png" />
+    <Resource Include="Images\CreatedBy.png" />
+    <Resource Include="Images\deur-main.png" />
+    <Resource Include="Images\ExitToMain-opt.png" />
+    <Resource Include="Images\gamereset.png" />
+    <Resource Include="Images\HomeButton.png" />
+    <Resource Include="Images\homemenu.png" />
+    <Resource Include="Images\Logo5.png" />
+    <Resource Include="Images\MainMenuBackground.jpg" />
+    <Resource Include="Images\MainMenuButton.png" />
+    <Resource Include="Images\Play.png" />
+    <Resource Include="Images\QuitButton.png" />
+    <Resource Include="Images\ReplayBoxBaby.png" />
+    <Resource Include="Images\ReplayButtonBaby.png" />
+    <Resource Include="Images\ReplayButtonStudent.png" />
+    <Resource Include="Images\SelectionButton.png" />
+    <Resource Include="Images\Soon.png" />
+    <Resource Include="Images\startstudent-rarr.png" />
+    <Resource Include="Images\startstudent.png" />
+    <Resource Include="Images\Stop.png" />
+    <Resource Include="Images\StudentButton.png" />
+    <Resource Include="Images\whitegamereset.png" />
+    <Resource Include="Images\whitehomemenu.png" />
+  </ItemGroup>
+
+</Project>

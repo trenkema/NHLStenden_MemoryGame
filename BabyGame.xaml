@@ -1,0 +1,30 @@
+﻿<Window x:Class="MemoryProject.BabyGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryProject"
+        mc:Ignorable="d"
+        Title="Struggle" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/BabyBackground.png"/>
+    </Window.Background>
+    <Grid x:Name="BabyMemoryGrid" Margin="10,10,90,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Source="Images/HomeButton.png" Grid.Row="1" HorizontalAlignment="Left" MouseLeftButtonDown="MainMenu" Grid.Column="1" ToolTip="Teruggaan naar hoofdenu" Margin="10,0,0,0"/>
+        <Image Source="Images/ReplayButtonBaby.png" Grid.Row="1" HorizontalAlignment="Right" MouseLeftButtonDown="Restart_MouseLeftButtonDown" Margin="0,16,2,10" Grid.Column="1" Width="116"/>
+        <!--<Image Source="/Images/ReplayButtonBaby.png" Grid.Row="1" MouseLeftButtonDown="ReplayButton" HorizontalAlignment="Right" Width="206" Margin="0,21,37.4,20.4" Grid.ColumnSpan="2" ToolTip="Spel herstarten"/>-->
+        <Image Grid.Column="2" Margin="0,0,-78.4,0.2" Grid.Row="2" Source="/Images/Stop.png" Stretch="Fill" MaxHeight="72" MaxWidth="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="StopMusicButton"/>
+        <Image Grid.Column="2" Margin="0,0,-78.4,77.2" Grid.Row="1" Source="/Images/Play.png" Stretch="Fill" MaxHeight="72" MaxWidth="90" HorizontalAlignment="Right" VerticalAlignment="Bottom" MouseLeftButtonDown="PlayMusicButton" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
