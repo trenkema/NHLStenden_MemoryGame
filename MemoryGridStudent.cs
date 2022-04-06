@@ -402,7 +402,7 @@ namespace MemoryProject
         public void highscoresave()
         {
             if (!StudentOptions.MultiplayerEnabled)
-            {
+            { 
                 if (scorePlayerOne < 100)
                 {
                     scorestring = "0" + Convert.ToString(scorePlayerOne);
@@ -414,18 +414,10 @@ namespace MemoryProject
 
                 string playerscore = scorestring + " " + StudentOptions.PlayerNameOne;
                 ExactP = Path.Combine(Environment.CurrentDirectory, "scorelog.txt");
-
-                if (!File.Exists(ExactP))
-                {
-                    File.Create(ExactP).Dispose();
-                }
-
-                if (File.Exists(ExactP))
-                {
-                    File.AppendAllText(ExactP, playerscore + Environment.NewLine);
-                    scores.Clear();
-                    readscores();
-                }
+                
+                File.AppendAllText(ExactP, playerscore + Environment.NewLine);
+                scores.Clear();
+                readscores();
             }
         }
 
@@ -439,6 +431,7 @@ namespace MemoryProject
             {
                 scores.Add(line);
             }
+
             scores.Sort();
             scores.Reverse();
         }
