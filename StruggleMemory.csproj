@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <IncludeAllContentForSelfExtract>True</IncludeAllContentForSelfExtract>
 	<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     <PublishSingleFile>true</PublishSingleFile>
     <ApplicationIcon>AppIcon.ico</ApplicationIcon>
@@ -73,6 +74,34 @@
     <None Remove="Images\StudentButton.png" />
     <None Remove="Images\whitegamereset.png" />
     <None Remove="Images\whitehomemenu.png" />
+    <None Remove="scorelog.txt" />
+    <None Remove="Sounds\ChillTrapBeat.wav" />
+    <None Remove="Sounds\ClickSound.wav" />
+    <None Remove="Sounds\CorrectSound.wav" />
+    <None Remove="Sounds\WrongSound.wav" />
+    <None Remove="Sounds\XPShutdown.wav" />
+    <None Remove="Sounds\XPStartup.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sounds\ChillTrapBeat.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\ClickSound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\CorrectSound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\WrongSound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\XPShutdown.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sounds\XPStartup.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -139,6 +168,24 @@
     <Resource Include="Images\StudentButton.png" />
     <Resource Include="Images\whitegamereset.png" />
     <Resource Include="Images\whitehomemenu.png" />
+    <Content Include="scorelog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

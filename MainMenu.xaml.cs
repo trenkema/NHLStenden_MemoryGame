@@ -20,9 +20,6 @@ namespace MemoryProject
 
     public partial class MainMenu : Window
     {
-        public static string exactPath = System.Environment.CurrentDirectory;
-        public static DirectoryInfo parent1;
-        private static DirectoryInfo parent2;
         DispatcherTimer _timer;
         TimeSpan _time;
 

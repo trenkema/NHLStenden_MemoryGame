@@ -18,7 +18,6 @@ namespace MemoryProject
 {
     public partial class StudentOptions : Window
     {
-        WinnerMenu winnerMenu = new WinnerMenu();
         public static bool MultiplayerEnabled;
 
         public static int theme = 1;
@@ -27,9 +26,6 @@ namespace MemoryProject
         public static string PlayerNameTwo;
         public static string exactPath = System.Environment.CurrentDirectory;
         public static DirectoryInfo parent1;
-        private static DirectoryInfo parent2;
-        DispatcherTimer _timer;
-        TimeSpan _time;
 
         string placeHolderPlayerText = "Enter Name";
 

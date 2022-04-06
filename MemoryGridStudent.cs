@@ -12,6 +12,7 @@ using System.Windows.Threading;
 using System.Threading;
 using System.Media;
 using System.IO;
+using System.Reflection;
 
 namespace MemoryProject
 {
@@ -34,13 +35,9 @@ namespace MemoryProject
         public int scorePlayerTwo = 100;
 
         //Highscore variables
-        public string exactPath = System.Environment.CurrentDirectory;
         private List<Card> cards = new List<Card>();
         public int correctSets;
         public int highscore = 0;
-        public DirectoryInfo parent1;
-        private DirectoryInfo parent2;
-        public string username = "X";
         public string scorestring = " ";
         string ExactP = "";
         public static List<string> scores = new List<string>();
@@ -414,10 +411,15 @@ namespace MemoryProject
                 {
                     scorestring = Convert.ToString(scorePlayerOne);
                 }
-                string playerscore = (scorestring + " " + StudentOptions.PlayerNameOne);
-                parent1 = Directory.GetParent(exactPath);
-                parent2 = Directory.GetParent(Convert.ToString(parent1));
-                ExactP = Convert.ToString(parent2) + @"\scorelog.txt";
+
+                string playerscore = scorestring + " " + StudentOptions.PlayerNameOne;
+                ExactP = Path.Combine(Environment.CurrentDirectory, "scorelog.txt");
+
+                if (!File.Exists(ExactP))
+                {
+                    File.Create(ExactP).Dispose();
+                }
+
                 if (File.Exists(ExactP))
                 {
                     File.AppendAllText(ExactP, playerscore + Environment.NewLine);
@@ -425,7 +427,6 @@ namespace MemoryProject
                     readscores();
                 }
             }
-
         }
 
         /// <summary>
@@ -440,33 +441,6 @@ namespace MemoryProject
             }
             scores.Sort();
             scores.Reverse();
-            if (scores.Count < 10)
-            {
-                for (int i = 0; i < scores.Count - 1; i++)
-                {
-                    //MessageBox.Show(scores[i]);
-                }
-            }
-            else
-            {
-                for (int i = 0; i < 10; i++)
-                {
-                    //MessageBox.Show(scores[i]);
-                }
-            }
-
         }
-
-        /// <summary>
-        /// Here it gets all the highscores into a string list
-        /// </summary>
-        /// <param name="i"></param>
-        /// <returns></returns>
-        public string GetHighScore(int i)
-        {
-            string highscore = scores[i];
-            return highscore;
-        }
-
     }
 }
